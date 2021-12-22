@@ -33,3 +33,5 @@ $routes = require $_SERVER['DOCUMENT_ROOT'] . '/project/config/routes.php';
 
 $router = new Router();
 $track = $router->getTrack($routes, $_SERVER['REQUEST_URI']);
+
+$page = (new Dispatcher) -> getPage($track);
