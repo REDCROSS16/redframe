@@ -5,6 +5,8 @@ namespace Core;
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/project/config/connection.php';
+
 spl_autoload_register(/** * @throws \Exception
  */ function ($class) {
     preg_match('#(.+)\\\\(.+?)$#', $class, $match);
