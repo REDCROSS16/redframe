@@ -17,7 +17,7 @@ class View
             ob_start();
                 $title = $page->title;
                 include $layoutPath;
-            return ob_clean();
+            return ob_get_clean(); # обязательно!!!!!
         }
         return new \Exception('layout not found!!!!');
     }
@@ -33,9 +33,11 @@ class View
         if (file_exists($viewPath)) {
             ob_start();
                 $data = $page->data;
-                extract($data); // массив в переменные
+                extract($data); // массив в переменные например h2 в $h2
                 include $viewPath; // подключаем файл с представлением
-            return ob_clean();
+            return ob_get_clean();
+        } else {
+            echo "Не найден файл с представлением по пути $viewPath"; die();
         }
     }
 }

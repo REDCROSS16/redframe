@@ -7,6 +7,11 @@ class TestController extends Controller
 {
     public function test()
     {
-        echo 'Test complited';
+        $this->title = 'Тестовый контроллер';
+        return $this->render('test/test',
+            [
+                'h1' => 'test',
+            ]
+        );
     }
 }

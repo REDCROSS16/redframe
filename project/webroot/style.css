@@ -1,0 +1,26 @@
+.sidebar, .left {
+    width: 300px;
+}
+
+header {
+    background-color: lavender;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+header a {
+    text-decoration: none;
+    color: blueviolet;
+    margin: 0 10px 0 10px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: lavender;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
