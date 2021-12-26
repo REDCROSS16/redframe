@@ -6,7 +6,7 @@ class Dispatcher
 {
     public function getPage(Track $track)
     {
-        $className = ucfirst($track->controller);
+        $className = ucfirst($track->controller) . 'Controller';
         $fullName = "\\project\\controllers\\$className";
         try {
             $controller = new $fullName;

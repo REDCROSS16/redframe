@@ -1,7 +1,7 @@
 <?php
-
+use \core\Route;
 return [
-    new \Core\Route('/test/', 'test', 'test'),
+    new Route('/test/', 'test', 'test'),
 
 ];
 
