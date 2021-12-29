@@ -7,6 +7,7 @@ ini_set('display_errors', 'on');
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/project/config/connection.php';
 
+# функция подключения классов
 spl_autoload_register(/** * @throws \Exception
  */ function ($class) {
     preg_match('#(.+)\\\\(.+?)$#', $class, $match);
@@ -30,11 +31,13 @@ spl_autoload_register(/** * @throws \Exception
     }
 });
 
-
+# массив с роутами
 $routes = require $_SERVER['DOCUMENT_ROOT'] . '/project/config/routes.php';
+# объект роутов
 $router = new Router();
+# путь с параметрами
 $track = $router->getTrack($routes, $_SERVER['REQUEST_URI']);
-
+# диспетчер создает объект класса контроллера и вызывает экшен, который передался в routs
 $page = (new Dispatcher) -> getPage($track);
-
+# подключает лайауты или специальный вьюшки
 echo (new View) -> render($page);

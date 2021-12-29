@@ -26,7 +26,7 @@ class View
      * @param Page $page
      * @return bool
      */
-    private function renderView(Page $page)
+    private function renderView(Page $page): bool
     {
         $viewPath = $_SERVER['DOCUMENT_ROOT'] . "/project/views/{$page->view}.php";
 

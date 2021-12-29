@@ -10,6 +10,13 @@
     <title>Main page</title>
 </head>
 <body>
+    <header>
+        <a href="/">Main</a>
+        <a href="#">Special</a>
+        <a href="#">Training</a>
+        <a href="#">Login</a>
+        <a href="/calendar/"><img src="/project/webroot/calendar/calendar.svg" class="img-calendar" ></a>
+    </header>
 
     <div style="width:400px;">
         <form action="#" method="post">

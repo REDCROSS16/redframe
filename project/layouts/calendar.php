@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css" />
     <link rel="stylesheet" href="/project/webroot/calendar/style.css">
 </head>
+
 <body>
 <div class="calendar">
 

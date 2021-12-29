@@ -2,6 +2,11 @@
 
 namespace Core;
 
+/**
+ * Class Track
+ * который хранит информации о контролерах, экшенах, параметрах
+ * @package Core
+ */
 class Track
 {
     private $controller;
