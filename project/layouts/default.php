@@ -12,6 +12,7 @@
     <a href="#">Special</a>
     <a href="#">Training</a>
     <a href="#">Login</a>
+    <a href="/calendar/"><img src="/project/webroot/calendar/calendar.svg" class="img-calendar" ></a>
 </header>
 <div class="container">
     <aside class="sidebar left">

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body
+{
+    background-color: #f1fbff;
+}
+
+.calendar
+{
+    padding: 20px 40px;
+}
+
+.months-container
+{
+    justify-content: center;
+    gap: 40px;
+}
+
+.calendar .months-container .month-container
+{
+    background-color: #fff;
+    padding: 20px;
+    min-width: 280px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.calendar table.month th.month-title
+{
+    color: #5a8990;
+    font-size: 1.9em;
+}
+
+table.month td:first-child,
+table.month td:last-child,
+table.month thead tr:nth-child(2) th:first-child,
+table.month thead tr:nth-child(2) th:last-child
+{
+    color:#f75c90;
+}
+
+table.month td.day .day-content:hover,
+.calendar .calendar-header .year-title:hover
+{
+    background: #f75c90;
+    color:#fff;
+}
+
+.calendar .calendar-header
+{
+    border: none;
+}
+
+.calendar .calendar-header .year-title
+{
+    font-size:  2em;
+}
+
+.calendar .calendar-header .year-neighbor,
+.calendar .calendar-header .year-neighbor2
+{
+    font-size: 1.5em;
+}

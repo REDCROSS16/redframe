@@ -6,6 +6,7 @@ $url = 'https://github.com/REDCROSS16';
 
 
 /**
+ * Получение страницы через $url
  * @param String $url
  * @return bool|string
  */
@@ -28,7 +29,6 @@ function getPageByUrl (String $url)   {
     } else {
         return $result;
     }
-
 }
 
 //echo getPageByUrl('https://onliner.by');

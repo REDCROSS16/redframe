@@ -6,7 +6,8 @@ return [
     new Route('/product/all/', 'product', 'all'),
     new Route( '/product/:id/', 'product', 'one'),
     new Route('/parser/training/', 'parser', 'training'),
-    new Route('/parser/curl/', 'parser', 'curl')
+    new Route('/parser/curl/', 'parser', 'curl'),
+    new Route('/calendar/', 'calendar', 'calendar'),
 
 ];
 
