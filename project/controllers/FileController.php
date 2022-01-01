@@ -6,7 +6,7 @@ use Core\Controller;
 
 class FileController extends Controller
 {
-    public function show()
+    public function upload()
     {
         $this->title = 'File uploader';
         return $this->render('file/upload', '');
