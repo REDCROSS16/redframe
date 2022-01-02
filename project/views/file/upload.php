@@ -5,9 +5,9 @@
 </form>
 
 <?php
-
 $file = new \project\controllers\FileController();
 
 if (isset($_FILES['file'])) {
-
+    var_dump($_FILES);
 }
+?>

@@ -9,7 +9,7 @@ class FileController extends Controller
     public function upload()
     {
         $this->title = 'File uploader';
-        return $this->render('file/upload', '');
+        return $this->render('file/upload', []);
     }
 
     public function getImage($file)
