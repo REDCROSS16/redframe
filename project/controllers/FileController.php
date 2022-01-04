@@ -3,6 +3,7 @@
 namespace project\controllers;
 
 use Core\Controller;
+use project\models\File;
 
 class FileController extends Controller
 {
@@ -12,14 +13,16 @@ class FileController extends Controller
         return $this->render('file/upload', []);
     }
 
-    public function getImage($file)
+    public static function makeUpload($file)
     {
         // формируем уникальное имя картинки: случайное число и name
         $name = mt_rand(0, 10000) . $file['name'];
-        copy($file['tmp_name'], 'img/' . $name);
+        $path = 'project/files/img/';
+        copy($file['tmp_name'], $path . $name);
+        (new File()) ->insertFile($name, $path . $name);
     }
 
-    private function can_upload($file)
+    public static function canUpload($file)
     {
         // если имя пустое, значит файл не выбран
         if ($file['name'] == '') return 'Вы не выбрали файл.';
@@ -39,6 +42,28 @@ class FileController extends Controller
         if (!in_array($mime, $types)) return 'Недопустимый тип файла.';
 
         return true;
+    }
+
+
+    public function getfile($params)
+    {
+        $this->title = 'upload file';
+        if (isset($_FILES)) {
+            var_dump('1');
+        }
+
+        return $this->render('file/file', [
+            'file' => $params['name'],
+        ]);
+    }
+
+    public function all ()
+    {
+        $files = (new File) ->getAll();
+        $this->title = 'Все файлы!';
+        return $this->render('file/all', [
+            'files' => $files,
+    ]);
     }
 }
 

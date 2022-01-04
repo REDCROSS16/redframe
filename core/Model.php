@@ -28,4 +28,9 @@ class Model
         for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
         return $data;
     }
+
+    protected function query($query)
+    {
+        return mysqli_query(self::$link, $query) or die(mysqli_error(self::$link));
+    }
 }
